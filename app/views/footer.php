@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
                     <div class="icon-email">
-                        <a href="#" title="Email"><img src="../images/Home-1/footer-top-icon-l.png" alt="Email" class="img-responsive"></a>
+                        <a href="#" title="Email"><img src="images/Home-1/footer-top-icon-l.png" alt="Email" class="img-responsive"></a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-5">
@@ -39,7 +39,7 @@
             <div class="row padding-footer-mid">
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <div class="footer-logo text-center list-content">
-                        <a href="index.html" title="Skyline"><img src="../images/Home-1/sky-logo-footer.png" alt="Image"></a>
+                        <a href="index.html" title="Skyline"><img src="images/Home-1/sky-logo-footer.png" alt="Image"></a>
                     </div>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-lg-offset-1 col-md-offset-1  ">
@@ -83,16 +83,16 @@
                     <div class="payments text-right">
                         <ul>
                             <li>
-                                <a href="#" title="Paypal"><img src="../images/Home-1/Paypal.png" alt="Paypal"></a>
+                                <a href="#" title="Paypal"><img src="images/Home-1/Paypal.png" alt="Paypal"></a>
                             </li>
                             <li>
-                                <a href="#" title="Visa"><img src="../images/Home-1/Visa.png" alt="Visa"></a>
+                                <a href="#" title="Visa"><img src="images/Home-1/Visa.png" alt="Visa"></a>
                             </li>
                             <li>
-                                <a href="#" title="Master"><img src="../images/Home-1/Master-card.png" alt="Master"></a>
+                                <a href="#" title="Master"><img src="images/Home-1/Master-card.png" alt="Master"></a>
                             </li>
                             <li>
-                                <a href="#" title="Discover"><img src="../images/Home-1/Discover.png" alt="Discover"></a>
+                                <a href="#" title="Discover"><img src="images/Home-1/Discover.png" alt="Discover"></a>
                             </li>
                         </ul>
                     </div>
@@ -106,19 +106,19 @@
 <a href="#" title="sroll" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
 <!--END / SROLL TOP-->
 <!-- LOAD JQUERY -->
-<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../js/vit-gallery.js"></script>
-<script type="text/javascript" src="../js/jquery.countTo.js"></script>
-<script type="text/javascript" src="../js/jquery.appear.min.js"></script>
-<script type="text/javascript" src="../js/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="../js/bootstrap-select.js"></script>
-<script type="text/javascript" src="../js/jquery.littlelightbox.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/vit-gallery.js"></script>
+<script type="text/javascript" src="js/jquery.countTo.js"></script>
+<script type="text/javascript" src="js/jquery.appear.min.js"></script>
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/jquery.littlelightbox.js"></script>
 <script type="text/javascript" src="../../../../cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDyCxHyc8z9gMA5IlipXpt0c33Ajzqix4"></script>
 <!-- Custom jQuery -->
-<script type="text/javascript" src="../js/sky.js"></script>
+<script type="text/javascript" src="js/sky.js"></script>
 </body>
 
 
