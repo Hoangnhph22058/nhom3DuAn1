@@ -13,18 +13,18 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <!-- CSS LIBRARY -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="css/gallery.css">
-    <link rel="stylesheet" type="text/css" href="css/vit-gallery.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="../css/vit-gallery.css">
     <link rel="shortcut icon" type="text/css" href="images/Home-1/sky-logo-header.png" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="../../../../cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" />
     <!-- MAIN STYLE -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <header class="header-sky">
         <div class="container">
@@ -48,7 +48,7 @@
             <nav class="navbar navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header ">
-                        <a class="navbar-brand" href="" title="Skyline"><img src="images/Home-1/sky-logo-header.png" alt="#"></a>
+                        <a class="navbar-brand" href="" title="Skyline"><img src="../images/Home-1/sky-logo-header.png" alt="#"></a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -81,14 +81,14 @@
     <section class="section-slider height-v">
         <div id="index12" class="owl-carousel  owl-theme">
             <div class="item">
-                <img alt="Third slide" src="images/Home-1/Slider-v1.jpg" class="img-responsive">
+                <img alt="Third slide" src="../images/Home-1/Slider-v1.jpg" class="img-responsive">
                 <div class="carousel-caption">
                     <h1>Welcome to Skyline</h1>
                     <p><span class="line-t"></span>Hotels & Resorts <span class="line-b"></span></p>
                 </div>
             </div>
             <div class="item">
-                <img alt="Third slide" src="images/Home-2/Slider-v2.jpg" class="img-responsive">
+                <img alt="Third slide" src="../images/Home-2/Slider-v2.jpg" class="img-responsive">
                 <div class="container">
                     <div class="carousel-caption ">
                         <h1 class="v2">Enjoy a Luxury  Experience</h1>
@@ -104,14 +104,14 @@
                         <label>Ngày nhận phòng </label>
                         <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
                             <input class="form-control" type="text">
-                            <span class="input-group-addon"><img src="images/Home-1/date-icon.png" alt="#"></span>
+                            <span class="input-group-addon"><img src="../images/Home-1/date-icon.png" alt="#"></span>
                         </div>
                     </div>
                     <div class="departure date-title ">
                         <label>Ngày trả phòng </label>
                         <div id="datepickeri" class="input-group date" data-date-format="dd-mm-yyyy">
                             <input class="form-control" type="text">
-                            <span class="input-group-addon"><img src="images/Home-1/date-icon.png" alt="#"></span>
+                            <span class="input-group-addon"><img src="../images/Home-1/date-icon.png" alt="#"></span>
                         </div>
                     </div>
                     <div class="adults date-title ">
