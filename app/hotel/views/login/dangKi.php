@@ -4,11 +4,6 @@
             <div class="content">
                 <h2 class="sky-h3">REGISTER FORM</h2>
                 <h5 class="p-v1">If you no have account in The Lotus Hotel! Register and feeling</h5>
-                <p style="color:green;"><?php 
-                if(isset($mess) && $mess != ""){
-                    echo $mess;
-                }
-                ?></p>
                 <form action="index.php?act=register" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" name="ten_tai_khoan" value="" placeholder="Tên Tài Khoản *">

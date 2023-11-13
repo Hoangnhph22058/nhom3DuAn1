@@ -1,9 +1,10 @@
 <section class="body-page page-v1">
         <div class="container">
             <div class="content">
-                <h2 class="sky-h3">LOGIN ACCOUNT</h2>
-                <h5 class="p-v1">Lorem Ipsum is simply dummy text of the printing</h5>
-                <form action="" method="post">
+                <h2 class="sky-h3">ĐĂNG NHẬP TÀI KHOẢN</h2>
+                <h5 class="p-v1">Nếu chưa có tài khoản vui lòng bấm "đăng kí thành viên mới"</h5>
+                
+                <form action="index.php?act=dang_nhap" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" name="email" value="" placeholder="User Name">
                     </div>
@@ -11,9 +12,16 @@
                         <input id="password-field" type="password" class="form-control" name="mat_khau" placeholder="Password">
                         <span class="fa fa-fw fa-eye field-icon toggle-password " data-toggle="#password-field"></span>
                     </div>
-                    <button type="submit" name="login" class="btn btn-default">LOGIN</button>
+                    <p>
+                        <?php 
+                        if(isset($mess) && $mess!=""){
+                            echo $mess;
+                        }
+                        ?>
+                    </p>
+                    <button type="submit" name="dang_nhap" class="btn btn-default">Đăng Nhập</button>
                 </form>
-                <p>I don’t have an account &nbsp;- &nbsp; Forgot Password</p>
+                <p ><a href="index.php?act=register" style="color: white;">Đăng kí thành viên mới</a> &nbsp;- &nbsp; <a href="" style="color: white;">Quên mật khẩu</a></p>
             </div>
         </div>
     </section>

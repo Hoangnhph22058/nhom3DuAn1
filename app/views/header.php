@@ -35,10 +35,23 @@
                     <span><i class="fa fa-phone" aria-hidden="true"></i> 0972428645</span>
                 </div>
                 <div class="header-top-right">
+                <?php
+                if (!isset($_SESSION)){?>
                     <ul>
-                        <li class="dropdown"><a href="index.php?act=login" title="LOGIN" class="">ĐĂNG NHẬP</a></li>
+                        <li class="dropdown"><a href="index.php?act=dang_nhap" title="LOGIN" class="">ĐĂNG NHẬP</a></li>
                         <li class="dropdown"><a href="index.php?act=register" title="REGISTER" class="">ĐĂNG KÍ</a></li>
                     </ul>
+                    <?php }else{ ?>
+                        <li class="dropdown ">
+                                <a href="" title="Reservation" class="dropdown-toggle" data-toggle="dropdown">Xin Chào <?php $_SESSION['ten_tai_khoan'] ?><b class="caret"></b></a>
+                                <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
+                                    <li><a href="" title="">Bước 1</a></li>
+                                    <li><a href="" title="">Bước 2</a></li>
+                                    <li><a href="" title="">Bước 3</a></li>
+                                    <li><a href="" title="">Bước 4</a></li>
+                                </ul>
+                            </li>
+                    <?php } ?>
                 </div>
             </div>
             <!-- END/HEADER-TOP -->
