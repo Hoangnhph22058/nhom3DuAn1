@@ -9,7 +9,7 @@
                     echo $mess;
                 }
                 ?></p>
-                <form action="index.php?act=register" method="post">
+                <form action="index.php?act=register" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <input type="text" class="form-control" name="ten_tai_khoan" value="" placeholder="Tên Tài Khoản *">
                     </div>
@@ -21,10 +21,10 @@
                         <input type="email" name="email" class="form-control" value="" required="required" title="" placeholder="Email *">
                     </div>
                     <div class="form-group">
-                        <input type="number" name="sdt" class="form-control" value="" required="required" title="" placeholder="Số Điện Thoại *">
+                        <input type="text" name="sdt" class="form-control" value="" required="required" title="" placeholder="Số Điện Thoại *">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="anh_dai_dien" class="form-control" value="" required="required" title="" placeholder="Ảnh đại diện *">
+                        <input type="file" name="anh_dai_dien" class="form-control" value="" required="required" title="" placeholder="Ảnh đại diện *">
                     </div>
                     <div class="form-group">
                         <input type="hidden" name="vai_tro" class="form-control" value="1">

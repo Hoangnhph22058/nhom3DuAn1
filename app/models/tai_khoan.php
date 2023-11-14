@@ -1,25 +1,31 @@
 <?php
-// session_start();
-function dang_nhap($email, $mat_khau){
-    $sql = "SELECT * FROM tai_khoan WHERE email='$email' and mat_khau='$mat_khau'";
+function dang_nhap($ten_tai_khoan, $mat_khau){
+    $sql = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='$ten_tai_khoan' and mat_khau='$mat_khau'";
     $tai_khoan = pdo_query_one($sql);
-    // var_dump($tai_khoan);die;
-    if($tai_khoan != false ){
-        $_SESSION['ten_tai_khoan'] = $email;
+    if($tai_khoan >0){
+        return $tai_khoan;
     }
-    else 
-    {
-        return "Thông tin đăng nhập sai vui lòng đăng nhập lại";
+    else{
+        return 0;
     }
+    
 }
 function dang_ki($ten_tai_khoan,$mat_khau,$email,$sdt,$anh_dai_dien,$vai_tro,$trang_thai){
     $sql ="INSERT INTO `tai_khoan` ( `ten_tai_khoan`, `mat_khau`, `email`, `sdt`, `anh_dai_dien`, `vai_tro`, `trang_thai`) VALUES ( '$ten_tai_khoan', '$mat_khau','$email','$sdt','$anh_dai_dien','$vai_tro','$trang_thai'); ";
     pdo_execute($sql);
 }
-function list_tai_khoan(){
-        $sql = "SELECT * FROM `tai_khoan`";
-        $list_tai_khoan = pdo_query($sql);
-        return $list_tai_khoan;
+function list_one_tai_khoan($id){
+        $sql = "SELECT * FROM `tai_khoan` where `id_tai_khoan` = '$id'";
+        $tai_khoan = pdo_query_one($sql);
+        return $tai_khoan;
 }
-
-?>
+function update_tai_khoan($id_tai_khoan,$ten_tai_khoan,$mat_khau,$email,$sdt,$anh_dai_dien,$vai_tro,$trang_thai){
+    if($anh_dai_dien!=""){
+        // $sql="update sanpham set iddm='".$iddm."',name='".$tensp."',price='".$giasp."',mota='".$mota."',img='".$hinh."' where id=".$id;
+        $sql=  "UPDATE `tai_khoan` SET `ten_tai_khoan` = '{$ten_tai_khoan}', `mat_khau` = '{$mat_khau}', `email` = '{$email}',`sdt` = '{$sdt}', `anh_dai_dien` = '{$anh_dai_dien}', `vai_tro` = '{$vai_tro}', `trang_thai` = '{$trang_thai}' WHERE `id_tai_khoan` = $id_tai_khoan";
+    }else{
+        //  $sql="update sanpham set iddm='".$iddm."',name='".$tensp."',price='".$giasp."',mota='".$mota."' where id=".$id;
+        $sql=  "UPDATE `tai_khoan` SET `ten_tai_khoan` = '{$ten_tai_khoan}', `mat_khau` = '{$mat_khau}', `email` = '{$email}',`sdt` = '{$sdt}',`vai_tro` = '{$vai_tro}', `trang_thai` = '{$trang_thai}' WHERE `id_tai_khoan` = $id_tai_khoan";
+    }
+    pdo_execute($sql);
+}
