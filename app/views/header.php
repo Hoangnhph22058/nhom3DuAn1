@@ -68,7 +68,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
-                            <a href="" title="Home" class="">Trang Chủ</a>
+                            <a href="index.php" title="Home" class="">Trang Chủ</a>
                         </li>
                         <li class="">
                             <a href="" title="Phòng" class="">Phòng</a>

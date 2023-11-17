@@ -29,7 +29,9 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                         $_SESSION['id_tai_khoan'] = $tai_khoan['id_tai_khoan'];
                         header('location:index.php');
                     } else {
+                        $_SESSION['ten_tai_khoan'] = $ten_tai_khoan;
                         $_SESSION['vai_tro'] = $vai_tro;
+                        $_SESSION['id_tai_khoan'] = $tai_khoan['id_tai_khoan'];
                         header('location:./nhanVien/index.php');
                     }
                 }

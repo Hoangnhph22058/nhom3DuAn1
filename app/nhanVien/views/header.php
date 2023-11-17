@@ -35,23 +35,13 @@
                     <span><i class="fa fa-phone" aria-hidden="true"></i> 0972428645</span>
                 </div>
                 <div class="header-top-right">
-                <?php
-                if (!isset($_SESSION)){?>
-                    <ul>
-                        <li class="dropdown"><a href="index.php?act=dang_nhap" title="LOGIN" class="">ĐĂNG NHẬP</a></li>
-                        <li class="dropdown"><a href="index.php?act=register" title="REGISTER" class="">ĐĂNG KÍ</a></li>
-                    </ul>
-                    <?php }else{ ?>
                         <li class="dropdown ">
-                                <a href="" title="Reservation" class="dropdown-toggle" data-toggle="dropdown">Xin Chào <?php $_SESSION['ten_tai_khoan'] ?><b class="caret"></b></a>
+                                <a style="color: white;" href="" title="Reservation" class="dropdown-toggle" data-toggle="dropdown">Xin Chào <?php echo $_SESSION['ten_tai_khoan'] ?><b class="caret"></b></a>
                                 <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
-                                    <li><a href="" title="">Bước 1</a></li>
-                                    <li><a href="" title="">Bước 2</a></li>
-                                    <li><a href="" title="">Bước 3</a></li>
-                                    <li><a href="" title="">Bước 4</a></li>
+                                    <li><a href="../index.php?act=dang_xuat" title="">Đăng Xuất</a></li>
+                                    <?php echo' <li><a href="index.php?act=one_tai_khoan&id='.$_SESSION['id_tai_khoan'].'"   title="">Thông Tin Tài Khoản</a></li>'?>
                                 </ul>
                             </li>
-                    <?php } ?>
                 </div>
             </div>
             <!-- END/HEADER-TOP -->
@@ -61,7 +51,7 @@
             <nav class="navbar navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header ">
-                        <a class="navbar-brand" href="" title="Skyline"><img src="../images/Home-1/sky-logo-header.png" alt="#"></a>
+                        <a class="navbar-brand" href="" title="Skyline"><img src="../../images/Home-1/sky-logo-header.png" alt="#"></a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
