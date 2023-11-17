@@ -2,7 +2,7 @@
     <select name="loai_phong">
         <?php foreach($ten_loai_phong as $item){
             extract($item);
-        echo '<option value="'.$id_loai_phong.'">'.$ten_loai_phong.'</option>';
+        echo '<option value="'.$ten_loai_phong.'">'.$ten_loai_phong.'</option>';
          } ?>
     </select><br>
     <label>ten phong</label>

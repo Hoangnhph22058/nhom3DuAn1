@@ -5,6 +5,7 @@ include "./views/header.php";
 include_once "./models/pdo.php";
 include_once "./models/tai_khoan.php";
 include_once "./models/loai_phong.php";
+include_once "./models/binh_luan.php";
 include_once "./models/phong.php";
 if (isset($_GET['act']) && ($_GET['act'] != '')) {
     $act = $_GET['act'];
@@ -97,7 +98,7 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
         case 'them_phong':
             $ten_loai_phong = show_loai_phong();
             if (isset($_POST['add_room'])) {
-                $id_loai_phong = $_POST['loai_phong'];
+                $loai_phong = $_POST['loai_phong'];
                 $ten_phong = $_POST['ten_phong'];
                 $anh = $_FILES['anh']['name'];
                 $target_dir = "./upload/";
@@ -107,14 +108,46 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                 $suc_chua = $_POST['suc_chua'];
                 $gia_tien = $_POST['gia_tien'];
                 $trang_thai = $_POST['trang_thai'];
-                insert_room($id_loai_phong, $ten_phong, $anh, $suc_chua, $gia_tien, $trang_thai);
+                insert_room($loai_phong, $ten_phong, $anh, $suc_chua, $gia_tien, $trang_thai);
                 $mess = "Thêm Phòng Thành Công";
             }
             include "./views/room/add.php";
             break;
+        case 'show_detail_room':
+            if(isset($_GET['id'])){
+                $phong_detail = show_room_detail($_GET['id']);
+            }
+            include  "./views/room/chi_tiet.php";
+            break;
         case 'show_phong':
             $phong = show_room();
             include './views/room/home.php';
+            break;
+        case 'binh_luan':
+            if(isset($_POST['binh_luan'])){
+                $chi_tiet_binh_luan = $_POST['chi_tiet_binh_luan'];
+                $id_phong = $_POST['id_phong'];
+                $id_tai_khoan = $_POST['id_tai_khoan'];
+                $trang_thai = $_POST['trang_thai'];
+                $date = date('Y-m-d H:i:s');
+                insert_comment($chi_tiet_binh_luan, $id_phong,$id_tai_khoan,$date,$trang_thai);
+                if(isset($_GET['id'])){
+                    $phong_detail = show_room_detail($_GET['id']);
+                }
+                include "./views/room/chi_tiet.php";
+            }
+            break;
+        case 'show_binh_luan':
+            if(isset($_GET['id'])&& $_GET['id']>0){
+                $id_phong = $_GET['id'];
+            }
+            else
+            {
+                $id_phong = 0;
+            }
+            $binh_luan = show_binh_luan($id_phong);
+            
+            include "./views/room/show_comment.php";
             break;
     }
 } else {

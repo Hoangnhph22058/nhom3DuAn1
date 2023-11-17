@@ -16,7 +16,7 @@
                                 <div class="wrap-box">
                                     <div class="box-img">
                                         <?php if(is_file($hinhParth)){ ?>
-                                        <img style="width: 400px; height:400px;" src="<?php echo $hinhParth  ?>" class="img-responsive" alt="PLuxury Room" title="Luxury Room">
+                                        <a href="index.php?act=show_detail_room&id=<?php echo $id_phong ?>"><img style="width: 400px; height:400px;" src="<?php echo $hinhParth  ?>" class="img-responsive" alt="PLuxury Room" title="Luxury Room"></a>
                                         <?php }else{ ?>
                                             <p>Phòng Không Có Ảnh</p>
                                         <?php } ?>

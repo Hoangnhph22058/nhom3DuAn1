@@ -2,8 +2,7 @@
 <section class="body-page page-v1 page-v2">
         <div class="container">
             <div class="content">
-                <h2 class="sky-h3">REGISTER FORM</h2>
-                <h5 class="p-v1">If you no have account in The Lotus Hotel! Register and feeling</h5>
+                <h2 class="sky-h3">Đăng Kí Tài Khoản</h2>
                 <p style="color:green;"><?php 
                 if(isset($mess) && $mess != ""){
                     echo $mess;
