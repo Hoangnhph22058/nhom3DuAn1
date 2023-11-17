@@ -1,11 +1,11 @@
 <?php
 session_start();
 ob_start();
-include "./views/header.php";
+include "../nhanVien/views/header.php";
 include_once "./models/pdo.php";
-include_once "./models/tai_khoan.php";
+// include_once "./models/tai_khoan.php";
 include_once "./models/loai_phong.php";
-include_once "./models/binh_luan.php";
+// include_once "./models/binh_luan.php";
 include_once "./models/phong.php";
 if (isset($_GET['act']) && ($_GET['act'] != '')) {
     $act = $_GET['act'];
@@ -111,17 +111,17 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                 insert_room($loai_phong, $ten_phong, $anh, $suc_chua, $gia_tien, $trang_thai);
                 $mess = "Thêm Phòng Thành Công";
             }
-            include "../views/room/add.php";
+            include "./views/phong/add.php";
             break;
         case 'show_detail_room':
             if(isset($_GET['id'])){
                 $phong_detail = show_room_detail($_GET['id']);
             }
-            include  "./views/room/chi_tiet.php";
+            include  "./views/phong/chi_tiet.php";
             break;
         case 'show_phong':
             $phong = show_room();
-            include './views/room/home.php';
+            include '../nhanVien/views/phong/list.php';
             break;
         case 'binh_luan':
             if(isset($_POST['binh_luan'])){
@@ -147,11 +147,11 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
             }
             $binh_luan = show_binh_luan($id_phong);
             
-            include "./views/room/show_comment.php";
+            include "./views/phong/show_comment.php";
             break;
     }
 } else {
     $phong = show_room();
-    include "./views/room/home.php";
+    include "../nhanVien/views/home.php";
 }
-include "./views/footer.php";
+include "../nhanVien/views/footer.php";
