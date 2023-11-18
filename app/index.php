@@ -119,6 +119,12 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
             if(isset($_GET['id'])){
                 $phong_detail = show_room_detail($_GET['id']);
             }
+            $id_phong = $_GET['id'];
+                if(isset($id_phong)){
+                    $binh_luan = show_binh_luan($id_phong);
+                    $mess = "Sản phẩm này chưa có bình luận!";
+                }
+                
             include  "./views/room/chi_tiet.php";
             break;
         case 'show_phong':
@@ -136,8 +142,10 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                 if(isset($_GET['id'])){
                     $phong_detail = show_room_detail($_GET['id']);
                 }
-                include "./views/room/chi_tiet.php";
             }
+                
+                include "./views/room/chi_tiet.php";
+            
             break;
         case 'show_binh_luan':
             if(isset($_GET['id'])&& $_GET['id']>0){
