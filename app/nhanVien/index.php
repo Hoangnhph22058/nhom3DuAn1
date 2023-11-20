@@ -105,20 +105,20 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
             $phong = show_room();
             include '../nhanVien/views/phong/list.php';
             break;
-        case 'binh_luan':
-            if(isset($_POST['binh_luan'])){
-                $chi_tiet_binh_luan = $_POST['chi_tiet_binh_luan'];
-                $id_phong = $_POST['id_phong'];
-                $id_tai_khoan = $_POST['id_tai_khoan'];
-                $trang_thai = $_POST['trang_thai'];
-                $date = date('Y-m-d H:i:s');
-                insert_comment($chi_tiet_binh_luan, $id_phong,$id_tai_khoan,$date,$trang_thai);
-                if(isset($_GET['id'])){
-                    $phong_detail = show_room_detail($_GET['id']);
-                }
-                include "./views/room/chi_tiet.php";
-            }
-            break;
+        // case 'binh_luan':
+        //     if(isset($_POST['binh_luan'])){
+        //         $chi_tiet_binh_luan = $_POST['chi_tiet_binh_luan'];
+        //         $id_phong = $_POST['id_phong'];
+        //         $id_tai_khoan = $_POST['id_tai_khoan'];
+        //         $trang_thai = $_POST['trang_thai'];
+        //         $date = date('Y-m-d H:i:s');
+        //         insert_comment($chi_tiet_binh_luan, $id_phong,$id_tai_khoan,$date,$trang_thai);
+        //         if(isset($_GET['id'])){
+        //             $phong_detail = show_room_detail($_GET['id']);
+        //         }
+        //         include "./views/room/chi_tiet.php";
+        //     }
+        //     break;
         case 'show_binh_luan':
             if(isset($_GET['id'])&& $_GET['id']>0){
                 $id_phong = $_GET['id'];
@@ -134,6 +134,6 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
     }
 } else {
     $phong = show_room();
-    include "../nhanVien/views/home.php";
+    include "../nhanVien/views/phong/home.php";
 }
 include "../nhanVien/views/footer.php";

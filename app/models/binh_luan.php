@@ -7,10 +7,11 @@ function show_binh_luan($id_phong){
     LEFT JOIN phong ON binh_luan.id_phong = phong.id_phong
     WHERE phong.id_phong = $id_phong;
 ";
-    // $sql = "SELECT * FROM `binh_luan`
-    //  LEFT JOIN phong ON binh_luan.id_phong = phong.id_phong
-    //  where phong.id_phong = $id_phong ";
     $binh_luan = pdo_query($sql);
     return $binh_luan;
+}
+function insert_comment($chi_tiet_binh_luan, $id_phong,$id_tai_khoan,$date,$trang_thai){
+    $sql = "INSERT INTO `binh_luan` (`chi_tiet_binh_luan`, `id_phong`, `id_tai_khoan`, `thoi_gian_binh_luan`, `trang_thai`) VALUES ('$chi_tiet_binh_luan','$id_phong','$id_tai_khoan','$date','$trang_thai');";
+    pdo_execute($sql);
 }
 ?>

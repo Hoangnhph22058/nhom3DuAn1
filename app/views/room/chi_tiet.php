@@ -138,7 +138,7 @@
                             <div class="product-detail_overview">
                                 <h5 class='text-uppercase'><?php echo $phong_detail['ten_phong'] ?></h5>
                                 <p>Sức Chứa: tối đa <?php echo $phong_detail['suc_chua'] ?> người </p><br>
-                                <p>Chhi Tiết: <?php echo $phong_detail['chi_tiet_phong'] ?> </p>
+                                <p>Chi Tiết: <?php echo $phong_detail['chi_tiet_phong'] ?> </p>
                             </div>
                         </div>
                         <!-- END / OVERVIEW -->

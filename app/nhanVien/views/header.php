@@ -13,15 +13,15 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <!-- CSS LIBRARY -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="css/gallery.css">
-    <link rel="stylesheet" type="text/css" href="css/vit-gallery.css">
-    <link rel="shortcut icon" type="text/css" href="images/Home-1/sky-logo-header.png" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="../css/vit-gallery.css">
+    <link rel="shortcut icon" type="text/css" href="../images/Home-1/sky-logo-header.png" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="../../../../cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" />
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="../css/styles.css">
@@ -52,27 +52,25 @@
                 <div class="container">
                     <div class="navbar-header ">
 
-                        <a class="navbar-brand" href="" title="Skyline"><img src="../../images/Home-1/sky-logo-header.png" alt="#"></a>
+                        <a class="navbar-brand" href="" title="Skyline"><img src="../images/Home-1/sky-logo-header.png" alt="#"></a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
-                                <a href="" title="Home" class="">Trang Chủ</a>
+                                <a href="" title="Phòng" class="">Quản Lí Loại Phòng</a>
                             </li>
                             <li class="">
-                                <a href="" title="Phòng" class="">Phòng</a>
+                                <a href="" title="Phòng" class="">Quản Lí Phòng</a>
                             </li>
-                            
-                            <li class="dropdown ">
-                                <a href="reservation_1.html" title="Reservation" class="dropdown-toggle" data-toggle="dropdown">Các Bước Đặt Phòng<b class="caret"></b></a>
-                                <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
-                                    <li><a href="" title="">Bước 1</a></li>
-                                    <li><a href="" title="">Bước 2</a></li>
-                                    <li><a href="" title="">Bước 3</a></li>
-                                    <li><a href="" title="">Bước 4</a></li>
-                                </ul>
+                            <li class="">
+                                <a href="" title="Phòng" class="">Quản Bình Luận</a>
                             </li>
-                            <li><a href="contact.html" title="Contact">Liên Hệ</a></li>
+                            <li class="">
+                                <a href="" title="Phòng" class="">Quản Tài Khoản</a>
+                            </li>
+                            <li class="">
+                                <a href="" title="Phòng" class="">Setting</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
