@@ -22,6 +22,8 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                     $vai_tro = $tai_khoan['vai_tro'];
                     if ($vai_tro == 0) {
                         $_SESSION['vai_tro'] = $vai_tro;
+                        $_SESSION['ten_tai_khoan'] = $ten_tai_khoan;
+                        $_SESSION['id_tai_khoan'] = $tai_khoan['id_tai_khoan'];
                         header('location:./hotel/index.php');
                     } elseif ($vai_tro == 1) {
                         $_SESSION['vai_tro'] = $vai_tro;
