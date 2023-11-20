@@ -43,25 +43,7 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
             unset($_SESSION['id_tai_khoan']);
             header("location:index.php");
             break;
-        case 'register':
-            if (isset($_POST['dang_ki'])) {
-                $ten_tai_khoan = $_POST['ten_tai_khoan'];
-                $mat_khau = $_POST['mat_khau'];
-                $email = $_POST['email'];
-                $sdt = $_POST['sdt'];
-                $anh_dai_dien = $_FILES['anh_dai_dien']['name'];
-                $target_dir = "./upload/";
-                $target_file = $target_dir . basename($_FILES['anh_dai_dien']['name']);
-                if (move_uploaded_file($_FILES['anh_dai_dien']['tmp_name'], $target_file)) {
-                }
-                $vai_tro = $_POST['vai_tro'];
-                $trang_thai = $_POST['trang_thai'];
-                dang_ki($ten_tai_khoan, $mat_khau, $email, $sdt, $anh_dai_dien, $vai_tro, $trang_thai);
-                $mess = "Thêm Tài Khoản Thành Công";
-                // header('location: index.php?act=list_tai_khoan');
-            }
-            include "./views/dangKi.php";
-            break;
+        
         case 'one_tai_khoan':
             if (isset($_GET['id'])) {
                 $tai_khoan = list_one_tai_khoan($_GET['id']);
