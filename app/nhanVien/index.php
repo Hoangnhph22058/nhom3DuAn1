@@ -1,16 +1,25 @@
 <?php
 session_start();
 ob_start();
+<<<<<<< HEAD
 include "./views/header.php";
 include_once "./models/pdo.php";
 include_once "./models/tai_khoan.php";
 include_once "./models/loai_phong.php";
 include_once "./models/binh_luan.php";
+=======
+include "../nhanVien/views/header.php";
+include_once "./models/pdo.php";
+include_once "./models/tai_khoan.php";
+include_once "./models/loai_phong.php";
+// include_once "./models/binh_luan.php";
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
 include_once "./models/phong.php";
 if (isset($_GET['act']) && ($_GET['act'] != '')) {
     $act = $_GET['act'];
     switch ($act) {
             //tai khoan
+<<<<<<< HEAD
         case 'dang_nhap':
             if (isset($_POST['dang_nhap'])) {
                 $ten_tai_khoan = $_POST['ten_tai_khoan'];
@@ -41,6 +50,38 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
             unset($_SESSION['vai_tro']);
             unset($_SESSION['id_tai_khoan']);
             header('location:index.php');
+=======
+        // case 'dang_nhap':
+        //     if (isset($_POST['dang_nhap'])) {
+        //         $ten_tai_khoan = $_POST['ten_tai_khoan'];
+        //         $mat_khau = $_POST['mat_khau'];
+        //         $tai_khoan = dang_nhap($ten_tai_khoan, $mat_khau);
+        //         if ($tai_khoan == 0) {
+        //             $thong_bao = "TÀI KHOẢN HOẶC MẬT KHẨU KHÔNG ĐÚNG! VUI LÒNG ĐĂNG NHẬP LẠI";
+        //         } else {
+        //             $vai_tro = $tai_khoan['vai_tro'];
+        //             if ($vai_tro == 0) {
+        //                 $_SESSION['vai_tro'] = $vai_tro;
+        //                 header('location:./hotel/index.php');
+        //             } elseif ($vai_tro == 1) {
+        //                 $_SESSION['vai_tro'] = $vai_tro;
+        //                 $_SESSION['ten_tai_khoan'] = $tai_khoan['ten_tai_khoan'];
+        //                 $_SESSION['id_tai_khoan'] = $tai_khoan['id_tai_khoan'];
+        //                 header('location:index.php');
+        //             } else {
+        //                 $_SESSION['vai_tro'] = $vai_tro;
+        //                 header('location:./nhanVien/index.php');
+        //             }
+        //         }
+        //     }
+            // include "./views/dangNhap.php";
+            // break;
+        case 'log_out':
+            unset($_SESSION['ten_tai_khoan']);
+            unset($_SESSION['vai_tro']);
+            unset($_SESSION['id_tai_khoan']);
+            header("location:index.php");
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
             break;
         case 'register':
             if (isset($_POST['dang_ki'])) {
@@ -65,13 +106,21 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
             if (isset($_GET['id'])) {
                 $tai_khoan = list_one_tai_khoan($_GET['id']);
             }
+<<<<<<< HEAD
             include "./views/list_tai_khoan.php";
+=======
+            include "./views/login/list_tai_khoan.php";
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
             break;
         case 'edit_tai_khoan':
             if (isset($_GET['id'])) {
                 $tai_khoan = list_one_tai_khoan($_GET['id']);
             }
+<<<<<<< HEAD
             include "./views/edit.php";
+=======
+            include "./views/login/edit.php";
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
             break;
         case 'update_tai_khoan':
             if (isset($_POST['update'])) {
@@ -81,7 +130,11 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                 $email = $_POST['email'];
                 $sdt = $_POST['sdt'];
                 $anh_dai_dien = $_FILES['anh_dai_dien']['name'];
+<<<<<<< HEAD
                 $target_dir = "./upload/";
+=======
+                $target_dir = "../upload/";
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
                 $target_file = $target_dir . basename($_FILES["anh_dai_dien"]["name"]);
                 if (move_uploaded_file($_FILES["anh_dai_dien"]["tmp_name"], $target_file)) {
                 }
@@ -91,6 +144,7 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                 $tai_khoan = list_one_tai_khoan($id_tai_khoan);
                 $mess = "Thay Đổi Thông Tin Tài Khoản Thành Công";
             }
+<<<<<<< HEAD
             include "./views/list_tai_khoan.php";
             break;
             //phong 
@@ -178,6 +232,30 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                         // Include file view danh sách phòng và hiển thị thông báo
                         include "./views/phong/list.php";
                         break;
+=======
+
+            include "./views/login/list_tai_khoan.php";
+            break;
+            //phong 
+        case 'them_phong':
+            $ten_loai_phong = show_loai_phong();
+            if (isset($_POST['add_room'])) {
+                $loai_phong = $_POST['loai_phong'];
+                $ten_phong = $_POST['ten_phong'];
+                $anh = $_FILES['anh']['name'];
+                $target_dir = "./upload/";
+                $target_file = $target_dir . basename($_FILES['anh']['name']);
+                if (move_uploaded_file($_FILES['anh']['tmp_name'], $target_file)) {
+                }
+                $suc_chua = $_POST['suc_chua'];
+                $gia_tien = $_POST['gia_tien'];
+                $trang_thai = $_POST['trang_thai'];
+                insert_room($loai_phong, $ten_phong, $anh, $suc_chua, $gia_tien, $trang_thai);
+                $mess = "Thêm Phòng Thành Công";
+            }
+            include "./views/phong/add.php";
+            break;
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
         case 'show_detail_room':
             if(isset($_GET['id'])){
                 $phong_detail = show_room_detail($_GET['id']);
@@ -186,7 +264,11 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
             break;
         case 'show_phong':
             $phong = show_room();
+<<<<<<< HEAD
             include './views/phong/home.php';
+=======
+            include '../nhanVien/views/phong/list.php';
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
             break;
         case 'binh_luan':
             if(isset($_POST['binh_luan'])){
@@ -217,6 +299,12 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
     }
 } else {
     $phong = show_room();
+<<<<<<< HEAD
     include "./views/phong/home.php";
 }
 include "../views/footer.php";
+=======
+    include "../nhanVien/views/home.php";
+}
+include "../nhanVien/views/footer.php";
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825

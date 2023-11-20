@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
 <form action="index.php?act=them_phong" enctype="multipart/form-data" method="post">
     <select name="loai_phong">
         <?php foreach($ten_loai_phong as $item){
@@ -6,6 +9,7 @@
         echo '<option value="'.$id_loai_phong.'">'.$ten_loai_phong.'</option>';
          } ?>
     </select><br>
+<<<<<<< HEAD
     <label>Tên Phòng</label>
     <input type="text" name="ten_phong" value="">
     <br><label>Ảnh</label>
@@ -15,10 +19,22 @@
     <br><label>Giá Tiền</label>
     <input type="number" name="gia_tien">
     <br><label>Trạng Thái</label>
+=======
+    <label>ten phong</label>
+    <input type="text" name="ten_phong" value="">
+    <br><label>anh</label>
+    <input type="file" name="anh">
+    <br><label>suc chua</label>
+    <input type="number" name="suc_chua">
+    <br><label>gia tien</label>
+    <input type="number" name="gia_tien">
+    <br><label>trang thai</label>
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
     <select name="trang_thai" >
         <option value="0">Trống</option>
         <option value="1">Đã đặt</option>
     </select>
+<<<<<<< HEAD
     <button type="submit" name="add_room" >ADD</button>
 </form>
 <?php
@@ -44,3 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_room"])) {
     }
 }
 ?>
+=======
+    <button type="submit" name="add_room">ADD</button>
+</form>
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825

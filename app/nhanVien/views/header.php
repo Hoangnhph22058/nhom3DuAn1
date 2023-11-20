@@ -35,6 +35,7 @@
                     <span><i class="fa fa-phone" aria-hidden="true"></i> 0972428645</span>
                 </div>
                 <div class="header-top-right">
+<<<<<<< HEAD
                 <?php
                 if (!isset($_SESSION)){?>
                     <ul>
@@ -52,6 +53,15 @@
                                 </ul>
                             </li>
                     <?php } ?>
+=======
+                        <li class="dropdown ">
+                                <a style="color: white;" href="" title="Reservation" class="dropdown-toggle" data-toggle="dropdown">Xin Chào <?php echo $_SESSION['ten_tai_khoan'] ?><b class="caret"></b></a>
+                                <ul class="dropdown-menu icon-fa-caret-up submenu-hover">
+                                    <li><a href="../index.php?act=dang_xuat" title="">Đăng Xuất</a></li>
+                                    <?php echo' <li><a href="index.php?act=one_tai_khoan&id='.$_SESSION['id_tai_khoan'].'"   title="">Thông Tin Tài Khoản</a></li>'?>
+                                </ul>
+                            </li>
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
                 </div>
             </div>
             <!-- END/HEADER-TOP -->
@@ -61,7 +71,11 @@
             <nav class="navbar navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header ">
+<<<<<<< HEAD
                         <a class="navbar-brand" href="" title="Skyline"><img src="../images/Home-1/sky-logo-header.png" alt="#"></a>
+=======
+                        <a class="navbar-brand" href="" title="Skyline"><img src="../../images/Home-1/sky-logo-header.png" alt="#"></a>
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">

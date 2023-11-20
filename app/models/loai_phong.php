@@ -4,4 +4,5 @@ function show_loai_phong(){
     $ten_loai_phong = pdo_query($sql);
     return $ten_loai_phong;
 }
+
 ?>

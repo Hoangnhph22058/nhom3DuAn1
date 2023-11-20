@@ -29,7 +29,9 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                         $_SESSION['id_tai_khoan'] = $tai_khoan['id_tai_khoan'];
                         header('location:index.php');
                     } else {
+                        $_SESSION['ten_tai_khoan'] = $ten_tai_khoan;
                         $_SESSION['vai_tro'] = $vai_tro;
+                        $_SESSION['id_tai_khoan'] = $tai_khoan['id_tai_khoan'];
                         header('location:./nhanVien/index.php');
                     }
                 }
@@ -111,12 +113,18 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                 insert_room($loai_phong, $ten_phong, $anh, $suc_chua, $gia_tien, $trang_thai);
                 $mess = "Thêm Phòng Thành Công";
             }
-            include "./views/room/add.php";
+            include "../views/room/add.php";
             break;
         case 'show_detail_room':
             if(isset($_GET['id'])){
                 $phong_detail = show_room_detail($_GET['id']);
             }
+            $id_phong = $_GET['id'];
+                if(isset($id_phong)){
+                    $binh_luan = show_binh_luan($id_phong);
+                    $mess = "Sản phẩm này chưa có bình luận!";
+                }
+                
             include  "./views/room/chi_tiet.php";
             break;
         case 'show_phong':
@@ -134,8 +142,18 @@ if (isset($_GET['act']) && ($_GET['act'] != '')) {
                 if(isset($_GET['id'])){
                     $phong_detail = show_room_detail($_GET['id']);
                 }
-                include "./views/room/chi_tiet.php";
+
+                $mess = "Bình luận thành công";
             }
+            $id_phong = $_GET['id'];
+                if(isset($id_phong)){
+                    $binh_luan = show_binh_luan($id_phong);
+                    $mess = "Sản phẩm này chưa có bình luận!";
+                }
+                
+                
+                include "./views/room/chi_tiet.php";
+            
             break;
         case 'show_binh_luan':
             if(isset($_GET['id'])&& $_GET['id']>0){

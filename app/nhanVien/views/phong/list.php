@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row">
     <div class="row frmtitle mb">
         <h1>DANH SÁCH SẢN PHẨM </h1>
@@ -10,6 +11,9 @@
          } ?>
         </select>
     </form>
+=======
+
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
 <table>
     <tr>
         <th>Tên Phòng</th>
@@ -20,7 +24,11 @@
         <th></th>
     </tr>
     <?php 
+<<<<<<< HEAD
         foreach($ten_loai_phong as $item){
+=======
+        foreach($phong as $item){
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
             extract($item);
     echo '<tr boder =1>
         <td>'.$id_phong.'</td>
@@ -30,7 +38,10 @@
         <td>'.$suc_chua.'</td>
         <td>'.$gia_tien.'</td>
         <td>'.$trang_thai.'</td>
+<<<<<<< HEAD
         
+=======
+>>>>>>> 3d97e4d7dcf14b803aadaed5b53632b5038fd825
     </tr>';
     } 
     ?>
