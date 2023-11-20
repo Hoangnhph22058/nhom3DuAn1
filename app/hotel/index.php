@@ -3,10 +3,10 @@ session_start();
 ob_start();
 include "./views/header.php";
 include_once "./models/pdo.php";
-include_once "./models/tai_khoan.php";
-include_once "./models/loai_phong.php";
-include_once "./models/binh_luan.php";
-include_once "./models/phong.php";
+include_once "../models/tai_khoan.php";
+// include_once "./models/loai_phong.php";
+// include_once "./models/binh_luan.php";
+// include_once "./models/phong.php";
 if (isset($_GET['act']) && ($_GET['act'] != '')) {
     $act = $_GET['act'];
     switch ($act) {
