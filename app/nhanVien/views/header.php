@@ -57,19 +57,16 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
-                                <a href="" title="Phòng" class="">Quản Lí Loại Phòng</a>
+                                <a href="" title="Phòng" class="">Quản Lí Đơn Hàng</a>
                             </li>
                             <li class="">
-                                <a href="" title="Phòng" class="">Quản Lí Phòng</a>
+                                <a href="" title="Phòng" class="">Thống Kê</a>
                             </li>
                             <li class="">
-                                <a href="" title="Phòng" class="">Quản Bình Luận</a>
+                                <a href="" title="Phòng" class="">Xem Bình Luận Bình Luận</a>
                             </li>
                             <li class="">
-                                <a href="" title="Phòng" class="">Quản Tài Khoản</a>
-                            </li>
-                            <li class="">
-                                <a href="" title="Phòng" class="">Setting</a>
+                                <a href="" title="Phòng" class="">Quản Lí Tài Khoản Khách Hàng</a>
                             </li>
                         </ul>
                     </div>
