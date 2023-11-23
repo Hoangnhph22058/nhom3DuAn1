@@ -97,24 +97,22 @@
                                             <div class="check_availability-field">
                                                 <label>Arrive</label>
                                                 <div class="input-group date" data-date-format="dd-mm-yyyy" id="datepicker1">
-                                                    <input class="form-control wrap-box" type="text" placeholder="Arrival Date">
-                                                    <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                    <input class="form-control wrap-box" type="date" placeholder="Arrival Date">
                                                 </div>
                                             </div>
                                             <div class="check_availability-field">
                                                 <label>Depature</label>
                                                 <div id="datepicker2" class="input-group date" data-date-format="dd-mm-yyyy">
-                                                    <input class="form-control wrap-box" type="text" placeholder="Departure Date">
-                                                    <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                    <input class="form-control wrap-box" type="date" placeholder="Departure Date">
                                                 </div>
                                             </div>
+                                            <button class="btn btn-room btn-product">Book Now</button>
 
                                         </div>
                                     </div>
                                 </form>
                                 <!-- END / WIDGET CHECK AVAILABILITY -->
                             </div>
-                            <button class="btn btn-room btn-product">Book Now</button>
                         </div>
                     </div>
                     <!-- END / FORM BOOK -->
@@ -316,31 +314,31 @@
                 <?php } else { ?>
                     <p>Bạn cần đăng nhập để bình luận!<a href="index.php?act=dang_nhap">Đăng nhập ngay.</a></p><br>
                 <?php } ?>
-                <?php 
-                if(isset($binh_luan) && $binh_luan != NULL ){?>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">NỘI DUNG</th>
-                            <th scope="col">NGƯỜI BÌNH LUẬN</th>
-                            <th scope="col">THỜI GIAN BÌNH LUẬN</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($binh_luan as $value) {
-                            extract($value); ?>
+                <?php
+                if (isset($binh_luan) && $binh_luan != NULL) { ?>
+                    <table class="table">
+                        <thead>
                             <tr>
-                                <th><?= $id_binh_luan ?></th>
-                                <td><?= $chi_tiet_binh_luan ?></td>
-                                <td><?= $ten_tai_khoan ?></td>
-                                <td><?= $thoi_gian_binh_luan ?></td>
+                                <th scope="col">STT</th>
+                                <th scope="col">NỘI DUNG</th>
+                                <th scope="col">NGƯỜI BÌNH LUẬN</th>
+                                <th scope="col">THỜI GIAN BÌNH LUẬN</th>
                             </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-                <?php } else{ ?>
-                  <p> <?php echo $mess ?></p>  
+                        </thead>
+                        <tbody>
+                            <?php foreach ($binh_luan as $value) {
+                                extract($value); ?>
+                                <tr>
+                                    <th><?= $id_binh_luan ?></th>
+                                    <td><?= $chi_tiet_binh_luan ?></td>
+                                    <td><?= $ten_tai_khoan ?></td>
+                                    <td><?= $thoi_gian_binh_luan ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                <?php } else { ?>
+                    <p> <?php echo $mess ?></p>
                 <?php } ?>
             </div>
         </div>
