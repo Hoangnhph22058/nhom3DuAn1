@@ -28,7 +28,7 @@ function update_loai_phong($id,$ten_loai_phong,$anh_loai_phong,$chi_tiet_loai_ph
     pdo_execute($sql);
 }
 function delete_loai_phong($id){
-    $sql = "DELETE FROM `loai_phong` WHERE `id_loai_phong` = $id";
+    $sql = "DELETE * FROM `loai_phong` WHERE `id_loai_phong` = '$id'";
     pdo_execute($sql);
 }
 ?>
